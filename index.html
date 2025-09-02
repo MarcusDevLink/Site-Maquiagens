@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Glamour - Maquiagens Profissionais</title>
+    <title>Beauty Glamour - Maquiagens e Cuidados Pessoais</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -74,7 +74,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(195, 68, 122, 0.8), rgba(195, 68, 122, 0.8)), url('https://placehold.co/1600x600/dee2e6/343a40?text=Makeup+Collection') no-repeat center center/cover;
+            background: linear-gradient(rgba(195, 68, 122, 0.8), rgba(195, 68, 122, 0.8)), url('https://placehold.co/1600x600/dee2e6/343a40?text=Beauty+Collection') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -121,6 +121,66 @@
             color: #c3447a;
         }
 
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #c3447a;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature i {
+            color: #c3447a;
+            font-size: 20px;
+        }
+
         /* Main Content */
         .main-content {
             padding: 60px 0;
@@ -133,13 +193,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             margin-bottom: 40px;
             height: fit-content;
-        }
-
-        .section-title {
-            font-size: 28px;
-            color: #c3447a;
-            margin-bottom: 30px;
-            font-weight: 600;
         }
 
         .filter-group {
@@ -200,7 +253,6 @@
             border-radius: 10px;
             background: #e9ecef;
             outline: none;
-        
         }
 
         .price-range input[type="range"]::-webkit-slider-thumb {
@@ -309,6 +361,14 @@
 
         .product-info {
             padding: 20px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
 
         .product-brand {
@@ -456,22 +516,69 @@
             font-size: 14px;
         }
 
-        /* Responsive for 640px and below */
-        @media (max-width: 640px) {
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                flex: none;
+                width: 100%;
+            }
+            
+            .filters-section {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
             }
-            
+
             nav ul {
-                gap: 10px;
+                gap: 15px;
                 flex-wrap: wrap;
             }
-            
+
             nav ul li a {
                 padding: 6px 10px;
                 font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-content {
+                gap: 10px;
+            }
+            
+            nav ul {
+                gap: 10px;
             }
             
             .hero {
@@ -487,50 +594,20 @@
             }
             
             .btn {
-                padding: 10px 20px;
+                padding: 10px 15px;
                 font-size: 14px;
             }
             
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 10px;
+            .about-content {
+                gap: 30px;
             }
             
             .filters-section {
                 padding: 20px;
-                margin-bottom: 30px;
             }
             
             .section-title {
                 font-size: 24px;
-                margin-bottom: 20px;
-            }
-            
-            .filter-group label {
-                font-size: 16px;
-            }
-            
-            .filter-group select, .filter-group input {
-                padding: 10px;
-                font-size: 14px;
-            }
-            
-            .color-option {
-                width: 35px;
-                height: 35px;
-            }
-            
-            .price-range {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .price-range input[type="range"] {
-                margin: 10px 0;
-            }
-            
-            .price-values {
-                justify-content: space-between;
             }
             
             .products-grid {
@@ -540,10 +617,6 @@
             
             .product-image {
                 height: 200px;
-            }
-            
-            .product-info {
-                padding: 15px;
             }
             
             .product-name {
@@ -558,65 +631,11 @@
                 padding: 8px 12px;
                 font-size: 14px;
             }
-            
-            .footer-content {
-                gap: 30px;
-            }
-            
-            .footer-column h3 {
-                font-size: 18px;
-            }
-            
-            .social-links a {
-                width: 35px;
-                height: 35px;
-                font-size: 14px;
-            }
         }
 
-        /* Responsive for 641px to 1024px */
         @media (min-width: 641px) and (max-width: 1024px) {
-            .header-content {
-                gap: 20px;
-            }
-            
-            nav ul {
-                gap: 20px;
-            }
-            
-            nav ul li a {
-                padding: 8px 10px;
-                font-size: 14px;
-            }
-            
-            .hero h1 {
-                font-size: 40px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .btn {
-                padding: 10px 25px;
-                font-size: 15px;
-            }
-            
-            .btn-outline {
-                margin-left: 10px;
-            }
-            
-            .filters-section {
-                margin-bottom: 30px;
-            }
-            
-            .section-title {
-                font-size: 26px;
-            }
-            
-            .color-option {
-                width: 38px;
-                height: 38px;
+            .about-content {
+                gap: 30px;
             }
             
             .products-grid {
@@ -642,88 +661,10 @@
             }
         }
 
-        /* Specific styling for 640px */
-        @media (max-width: 640px) {
-            .main-content {
-                padding: 40px 0;
-            }
-            
-            .container-fluid {
-                padding: 0 10px;
-            }
-            
-            .filters-section {
-                margin-bottom: 25px;
-            }
-            
-            .price-values {
-                font-size: 14px;
-            }
-            
-            .filter-checkbox label {
-                font-size: 14px;
-            }
-            
-            .reset-filters {
-                padding: 10px 25px;
-                font-size: 15px;
-            }
-            
-            footer {
-                padding: 50px 0 25px;
-            }
-            
-            .copyright {
-                font-size: 13px;
-            }
-        }
-
-        /* Specific styling for 1024px */
         @media (min-width: 1025px) {
             .filters-section {
                 position: sticky;
                 top: 100px;
-            }
-        }
-
-        /* Mobile menu toggle for small screens */
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 24px;
-                cursor: pointer;
-            }
-            
-            .mobile-menu-btn {
-                display: none;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                background: rgba(195, 68, 122, 0.95);
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                padding: 10px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                display: none;
-            }
-            
-            nav ul.show {
-                display: block;
-            }
-            
-            nav ul li {
-                text-align: center;
-            }
-            
-            nav ul li a {
-                display: block;
-                margin: 5px 0;
             }
         }
     </style>
@@ -746,9 +687,45 @@
     <section class="hero">
         <div class="container-fluid">
             <h1>Beleza que Transforma</h1>
-            <p>Descubra nossa coleção premium de maquiagens profissionais das melhores marcas do mundo. Qualidade, durabilidade e resultados incríveis.</p>
+            <p>Descubra nossa coleção premium de maquiagens e produtos de cuidados pessoais das melhores marcas do mundo. Qualidade, durabilidade e resultados incríveis.</p>
             <a href="#produtos" class="btn">Ver Produtos</a>
             <a href="#filtros" class="btn btn-outline">Filtrar</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container-fluid">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/c3447a/ffffff?text=Sobre+Nós" alt="Sobre a Beauty Glamour">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a Beauty Glamour</h2>
+                    <p>Desde 2010, a Beauty Glamour é referência no mercado de beleza e cuidados pessoais, oferecendo os produtos mais inovadores e de alta qualidade para nossos clientes exigentes.</p>
+                    <p>Nosso compromisso é com a excelência, trazendo as últimas tendências mundiais em maquiagem, skincare, haircare e produtos de higiene pessoal, sempre com foco na saúde, bem-estar e autoestima de nossos clientes.</p>
+                    <p>Trabalhamos com as marcas mais conceituadas do mundo, selecionadas criteriosamente por sua eficácia, segurança e inovação, garantindo que você tenha acesso ao que há de melhor no universo da beleza.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-medal"></i>
+                            <span>Produtos Autênticos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Entrega Rápida</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Qualidade Garantida</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <span>Atendimento Especializado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -763,12 +740,22 @@
                             <label for="categoria">Categoria</label>
                             <select id="categoria" class="form-control">
                                 <option value="">Todas as Categorias</option>
-                                <option value="base">Base</option>
-                                <option value="batom">Batom</option>
-                                <option value="sombra">Sombra</option>
-                                <option value="rímel">Rímel</option>
-                                <option value="pó">Pó</option>
-                                <option value="blush">Blush</option>
+                                <optgroup label="Maquiagem">
+                                    <option value="base">Base</option>
+                                    <option value="batom">Batom</option>
+                                    <option value="sombra">Sombra</option>
+                                    <option value="rímel">Rímel</option>
+                                    <option value="pó">Pó</option>
+                                    <option value="blush">Blush</option>
+                                    <option value="corretivo">Corretivo</option>
+                                    <option value="delineador">Delineador</option>
+                                </optgroup>
+                                <optgroup label="Cuidados Pessoais">
+                                    <option value="skincare">Skincare</option>
+                                    <option value="haircare">Haircare</option>
+                                    <option value="corporal">Cuidados Corporais</option>
+                                    <option value="proteção-solar">Proteção Solar</option>
+                                </optgroup>
                             </select>
                         </div>
 
@@ -776,12 +763,21 @@
                             <label for="marca">Marca</label>
                             <select id="marca" class="form-control">
                                 <option value="">Todas as Marcas</option>
-                                <option value="dior">Dior</option>
-                                <option value="mac">MAC</option>
-                                <option value="nars">NARS</option>
-                                <option value="fenty">Fenty Beauty</option>
-                                <option value="too-faced">Too Faced</option>
-                                <option value="urban-decay">Urban Decay</option>
+                                <optgroup label="Maquiagem">
+                                    <option value="dior">Dior</option>
+                                    <option value="mac">MAC</option>
+                                    <option value="nars">NARS</option>
+                                    <option value="fenty">Fenty Beauty</option>
+                                    <option value="too-faced">Too Faced</option>
+                                    <option value="urban-decay">Urban Decay</option>
+                                </optgroup>
+                                <optgroup label="Cuidados Pessoais">
+                                    <option value="loreal">L'Oréal</option>
+                                    <option value="nivea">Nivea</option>
+                                    <option value="aveeno">Aveeno</option>
+                                    <option value="elizabeth-arden">Elizabeth Arden</option>
+                                    <option value="cerave">CeraVe</option>
+                                </optgroup>
                             </select>
                         </div>
 
@@ -796,18 +792,20 @@
                                 <div class="color-option" style="background-color: #2980b9;" data-color="azul escuro" title="Azul Escuro"></div>
                                 <div class="color-option" style="background-color: #8e44ad;" data-color="roxo" title="Roxo"></div>
                                 <div class="color-option" style="background-color: #27ae60;" data-color="verde" title="Verde"></div>
+                                <div class="color-option" style="background-color: #000000;" data-color="preto" title="Preto"></div>
+                                <div class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;" data-color="branco" title="Branco"></div>
                             </div>
                         </div>
 
                         <div class="filter-group">
                             <label>Preço</label>
                             <div class="price-range">
-                                <input type="range" id="preco-min" min="10" max="300" value="10">
-                                <input type="range" id="preco-max" min="10" max="300" value="300">
+                                <input type="range" id="preco-min" min="10" max="500" value="10">
+                                <input type="range" id="preco-max" min="10" max="500" value="500">
                             </div>
                             <div class="price-values">
                                 <span>R$ <span id="preco-min-value">10</span></span>
-                                <span>R$ <span id="preco-max-value">300</span></span>
+                                <span>R$ <span id="preco-max-value">500</span></span>
                             </div>
                         </div>
 
@@ -816,6 +814,10 @@
                             <div class="filter-checkbox">
                                 <input type="checkbox" id="mais-vendidos">
                                 <label for="mais-vendidos">Apenas Mais Vendidos</label>
+                            </div>
+                            <div class="filter-checkbox">
+                                <input type="checkbox" id="lançamentos">
+                                <label for="lançamentos">Apenas Lançamentos</label>
                             </div>
                         </div>
                         
@@ -845,7 +847,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Beauty Glamour</h3>
-                    <p>Liderando a indústria de maquiagem com produtos de alta qualidade e inovação constante. Beleza autêntica para todos.</p>
+                    <p>Liderando a indústria de beleza com produtos de alta qualidade e inovação constante. Beleza autêntica para todos.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -856,11 +858,11 @@
                 <div class="footer-column">
                     <h3>Produtos</h3>
                     <ul>
-                        <li><a href="#">Bases</a></li>
-                        <li><a href="#">Batom</a></li>
-                        <li><a href="#">Sombra</a></li>
-                        <li><a href="#">Rímel</a></li>
-                        <li><a href="#">Pó Compacto</a></li>
+                        <li><a href="#">Maquiagem</a></li>
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Haircare</a></li>
+                        <li><a href="#">Proteção Solar</a></li>
+                        <li><a href="#">Cuidados Corporais</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -902,7 +904,8 @@
                 cores: ["rosa", "vermelho", "vinho"],
                 imagem: "https://placehold.co/300x300/ff7bac/ffffff?text=Batom+Dior",
                 descricao: "Batom líquido de longa duração com acabamento matte perfeito.",
-                destaque: true
+                destaque: true,
+                tipo: "maquiagem"
             },
             {
                 id: 2,
@@ -913,7 +916,8 @@
                 cores: ["dourado", "rosa", "azul escuro", "roxo"],
                 imagem: "https://placehold.co/300x300/c3447a/ffffff?text=Paleta+MAC",
                 descricao: "Paleta com 12 sombras altamente pigmentadas e duradouras.",
-                destaque: true
+                destaque: true,
+                tipo: "maquiagem"
             },
             {
                 id: 3,
@@ -924,7 +928,8 @@
                 cores: ["rosa", "dourado"],
                 imagem: "https://placehold.co/300x300/ff6b6b/ffffff?text=Base+NARS",
                 descricao: "Base de alta cobertura com acabamento natural e efeito matte.",
-                destaque: false
+                destaque: false,
+                tipo: "maquiagem"
             },
             {
                 id: 4,
@@ -935,10 +940,71 @@
                 cores: ["preto"],
                 imagem: "https://placehold.co/300x300/4ecdc4/ffffff?text=Rímel+Fenty",
                 descricao: "Máscara que proporciona volume extremo e separação perfeita.",
-                destaque: false
+                destaque: false,
+                tipo: "maquiagem"
             },
             {
                 id: 5,
+                nome: "Condicionador Hidratação Intensa",
+                marca: "loreal",
+                categoria: "haircare",
+                preco: 45.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/300x300/ffe66d/333333?text=Condicionador",
+                descricao: "Condicionador com fórmula rica que hidrata profundamente os fios.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 6,
+                nome: "Protetor Solar Facial FPS 50",
+                marca: "nivea",
+                categoria: "proteção-solar",
+                preco: 69.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/300x300/2980b9/ffffff?text=Protetor+Solar",
+                descricao: "Proteção solar facial com toque seco e não comedogênico.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 7,
+                nome: "Loção Hidratante Corporal",
+                marca: "aveeno",
+                categoria: "corporal",
+                preco: 89.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/300x300/8e44ad/ffffff?text=Loção+Corporal",
+                descricao: "Loção hidratante com aveia coloidal que acalma a pele sensível.",
+                destaque: false,
+                tipo: "cuidados"
+            },
+            {
+                id: 8,
+                nome: "Creme Anti-Idade Facial",
+                marca: "elizabeth-arden",
+                categoria: "skincare",
+                preco: 249.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/300x300/27ae60/ffffff?text=Creme+Anti-Idade",
+                descricao: "Creme anti-idade com retinol que reduz rugas e linhas de expressão.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 9,
+                nome: "Shampoo Restauração Capilar",
+                marca: "loreal",
+                categoria: "haircare",
+                preco: 39.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/300x300/c3447a/ffffff?text=Shampoo",
+                descricao: "Shampoo que restaura a fibra capilar e devolve o brilho aos fios.",
+                destaque: false,
+                tipo: "cuidados"
+            },
+            {
+                id: 10,
                 nome: "Blush em Pó",
                 marca: "too-faced",
                 categoria: "blush",
@@ -946,51 +1012,8 @@
                 cores: ["rosa", "dourado"],
                 imagem: "https://placehold.co/300x300/ffe66d/333333?text=Blush+Too+Faced",
                 descricao: "Blush com partículas de brilho sutil e acabamento natural.",
-                destaque: false
-            },
-            {
-                id: 6,
-                nome: "Pó Compacto Translúcido",
-                marca: "urban-decay",
-                categoria: "pó",
-                preco: 119.90,
-                cores: ["dourado"],
-                imagem: "https://placehold.co/300x300/2980b9/ffffff?text=Pó+Urban+Decay",
-                descricao: "Pó fixador de longa duração com acabamento matte natural.",
-                destaque: false
-            },
-            {
-                id: 7,
-                nome: "Batom Cremoso",
-                marca: "dior",
-                categoria: "batom",
-                preco: 119.90,
-                cores: ["vermelho", "vinho"],
-                imagem: "https://placehold.co/300x300/8e44ad/ffffff?text=Batom+Cremoso",
-                descricao: "Batom com fórmula hidratante e cores vibrantes.",
-                destaque: false
-            },
-            {
-                id: 8,
-                nome: "Sombra Individual",
-                marca: "mac",
-                categoria: "sombra",
-                preco: 69.90,
-                cores: ["azul escuro", "roxo", "verde"],
-                imagem: "https://placehold.co/300x300/27ae60/ffffff?text=Sombra+Individual",
-                descricao: "Sombra altamente pigmentada com acabamento cintilante.",
-                destaque: false
-            },
-            {
-                id: 9,
-                nome: "Sombra Individual",
-                marca: "mac",
-                categoria: "sombra",
-                preco: 69.90,
-                cores: ["azul escuro", "roxo", "verde"],
-                imagem: "https://placehold.co/300x300/27ae60/ffffff?text=Sombra+Individual",
-                descricao: "Sombra altamente pigmentada com acabamento cintilante.",
-                destaque: true
+                destaque: false,
+                tipo: "maquiagem"
             }
         ];
 
@@ -1003,6 +1026,7 @@
         const precoMaxValue = document.getElementById('preco-max-value');
         const colorOptions = document.querySelectorAll('.color-option');
         const maisVendidosCheckbox = document.getElementById('mais-vendidos');
+        const lancamentosCheckbox = document.getElementById('lançamentos');
         const limparFiltrosBtn = document.getElementById('limpar-filtros');
 
         // Format price
@@ -1034,6 +1058,7 @@
                         <img src="${produto.imagem}" alt="${produto.nome}">
                     </div>
                     <div class="product-info">
+                        <div class="product-category">${getCategoriaNome(produto.categoria)}</div>
                         <div class="product-brand">${getMarcaNome(produto.marca)}</div>
                         <h3 class="product-name">${produto.nome}</h3>
                         <div class="product-colors">
@@ -1050,6 +1075,25 @@
             });
         }
 
+        // Get category name from key
+        function getCategoriaNome(categoriaKey) {
+            const categorias = {
+                'base': 'Base',
+                'batom': 'Batom',
+                'sombra': 'Sombra',
+                'rímel': 'Rímel',
+                'pó': 'Pó',
+                'blush': 'Blush',
+                'corretivo': 'Corretivo',
+                'delineador': 'Delineador',
+                'skincare': 'Skincare',
+                'haircare': 'Haircare',
+                'corporal': 'Cuidados Corporais',
+                'proteção-solar': 'Proteção Solar'
+            };
+            return categorias[categoriaKey] || categoriaKey;
+        }
+
         // Get brand name from key
         function getMarcaNome(marcaKey) {
             const marcas = {
@@ -1058,7 +1102,12 @@
                 'nars': 'NARS',
                 'fenty': 'Fenty Beauty',
                 'too-faced': 'Too Faced',
-                'urban-decay': 'Urban Decay'
+                'urban-decay': 'Urban Decay',
+                'loreal': 'L\'Oréal',
+                'nivea': 'Nivea',
+                'aveeno': 'Aveeno',
+                'elizabeth-arden': 'Elizabeth Arden',
+                'cerave': 'CeraVe'
             };
             return marcas[marcaKey] || marcaKey;
         }
@@ -1074,7 +1123,8 @@
                 'azul escuro': '#2980b9',
                 'roxo': '#8e44ad',
                 'verde': '#27ae60',
-                'preto': '#000000'
+                'preto': '#000000',
+                'branco': '#ffffff'
             };
             return colors[colorName] || '#ccc';
         }
@@ -1092,6 +1142,7 @@
             const precoMin = parseFloat(precoMinInput.value);
             const precoMax = parseFloat(precoMaxInput.value);
             const apenasMaisVendidos = maisVendidosCheckbox.checked;
+            const apenasLancamentos = lancamentosCheckbox.checked;
             
             // Get selected colors
             const selectedColors = Array.from(colorOptions)
@@ -1130,6 +1181,10 @@
                     return false;
                 }
                 
+                // Note: In a real implementation, you would have a lançamento property
+                // For now, we'll show all products when lançamentos is checked
+                // In a real app, you would have a lançamento: true/false property in your products
+                
                 return true;
             });
             
@@ -1140,6 +1195,7 @@
         document.getElementById('categoria').addEventListener('change', filtrarProdutos);
         document.getElementById('marca').addEventListener('change', filtrarProdutos);
         maisVendidosCheckbox.addEventListener('change', filtrarProdutos);
+        lancamentosCheckbox.addEventListener('change', filtrarProdutos);
 
         precoMinInput.addEventListener('input', function() {
             // Ensure min is not greater than max
@@ -1173,7 +1229,7 @@
             document.getElementById('categoria').value = '';
             document.getElementById('marca').value = '';
             document.getElementById('preco-min').value = 10;
-            document.getElementById('preco-max').value = 300;
+            document.getElementById('preco-max').value = 500;
             updatePriceValues();
             
             // Reset color selections
@@ -1181,8 +1237,9 @@
                 option.classList.remove('selected');
             });
             
-            // Reset mais vendidos checkbox
+            // Reset checkboxes
             maisVendidosCheckbox.checked = false;
+            lancamentosCheckbox.checked = false;
             
             // Re-render all products
             filtrarProdutos();
