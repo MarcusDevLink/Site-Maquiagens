@@ -7,694 +7,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f7f7;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container-fluid {
-            max-width: 1400px;
-            padding: 0 15px;
-        }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, #ff7bac, #c3447a);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: #fff;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 25px;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(195, 68, 122, 0.8), rgba(195, 68, 122, 0.8)), url('https://placehold.co/1600x600/dee2e6/343a40?text=Beauty+Collection') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #c3447a;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            margin-left: 15px;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #c3447a;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .section-title {
-            font-size: 28px;
-            color: #c3447a;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .feature i {
-            color: #c3447a;
-            font-size: 20px;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 60px 0;
-        }
-
-        .filters-section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-            height: fit-content;
-        }
-
-        .filter-group {
-            margin-bottom: 25px;
-        }
-
-        .filter-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: #555;
-        }
-
-        .filter-group select, .filter-group input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .filter-group select:focus, .filter-group input:focus {
-            outline: none;
-            border-color: #ff7bac;
-            box-shadow: 0 0 0 3px rgba(255, 123, 172, 0.2);
-        }
-
-        .color-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .color-option {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .color-option.selected {
-            border-color: #333;
-            transform: scale(1.1);
-        }
-
-        .price-range {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .price-range input[type="range"] {
-            flex: 1;
-            height: 8px;
-            border-radius: 10px;
-            background: #e9ecef;
-            outline: none;
-        }
-
-        .price-range input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #ff7bac;
-            cursor: pointer;
-            border: 3px solid white;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-
-        .price-values {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            font-weight: 500;
-            color: #555;
-        }
-
-        .filter-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-
-        .filter-checkbox input {
-            width: auto;
-            margin: 0;
-        }
-
-        .reset-filters {
-            background: #6c757d;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 16px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .reset-filters:hover {
-            background: #5a6268;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
-        }
-
-        /* Products Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: #ff7bac;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            z-index: 2;
-        }
-
-        .product-image {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.5s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-category {
-            font-size: 12px;
-            color: #888;
-            text-transform: uppercase;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .product-brand {
-            font-size: 14px;
-            color: #666;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .product-name {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .product-colors {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .color-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 1px solid #ddd;
-        }
-
-        .product-price {
-            font-size: 20px;
-            font-weight: 700;
-            color: #c3447a;
-            margin-bottom: 15px;
-        }
-
-        .product-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-details {
-            flex: 1;
-            padding: 10px 15px;
-            background: #c3447a;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-        }
-
-        .btn-details:hover {
-            background: #a53860;
-            transform: translateY(-2px);
-        }
-
-        /* No Results */
-        .no-results {
-            text-align: center;
-            padding: 60px 20px;
-            color: #666;
-            font-size: 18px;
-        }
-
-        .no-results i {
-            font-size: 60px;
-            color: #ddd;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 60px 0 30px;
-            margin-top: 80px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #ff7bac;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-column ul li a:hover {
-            color: #ff7bac;
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #444;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: #ff7bac;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #444;
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-image, .about-text {
-                flex: none;
-                width: 100%;
-            }
-            
-            .filters-section {
-                margin-bottom: 30px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-
-            nav ul li a {
-                padding: 6px 10px;
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 10px;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-
-        @media (max-width: 640px) {
-            .header-content {
-                gap: 10px;
-            }
-            
-            nav ul {
-                gap: 10px;
-            }
-            
-            .hero {
-                padding: 80px 20px;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .btn {
-                padding: 10px 15px;
-                font-size: 14px;
-            }
-            
-            .about-content {
-                gap: 30px;
-            }
-            
-            .filters-section {
-                padding: 20px;
-            }
-            
-            .section-title {
-                font-size: 24px;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .product-image {
-                height: 200px;
-            }
-            
-            .product-name {
-                font-size: 16px;
-            }
-            
-            .product-price {
-                font-size: 18px;
-            }
-            
-            .btn-details {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-        }
-
-        @media (min-width: 641px) and (max-width: 1024px) {
-            .about-content {
-                gap: 30px;
-            }
-            
-            .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-                gap: 20px;
-            }
-            
-            .product-image {
-                height: 210px;
-            }
-            
-            .product-name {
-                font-size: 17px;
-            }
-            
-            .product-price {
-                font-size: 19px;
-            }
-            
-            .btn-details {
-                padding: 9px 14px;
-                font-size: 15px;
-            }
-        }
-
-        @media (min-width: 1025px) {
-            .filters-section {
-                position: sticky;
-                top: 100px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         <div class="container-fluid header-content">
             <div class="logo">Beauty<span>Glamour</span></div>
-            <nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="main-nav">
                 <ul>
-                    <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
-                    <li><a href="#"><i class="fas fa-store"></i> Produtos</a></li>
-                    <li><a href="#"><i class="fas fa-info-circle"></i> Sobre</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
-                </ul>
+                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#produtos"><i class="fas fa-store"></i> Produtos</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#produtos"><i class="fas fa-store"></i> Produtos</a></li>
+                <li><a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </div>
 
     <section class="hero">
         <div class="container-fluid">
             <h1>Beleza que Transforma</h1>
             <p>Descubra nossa coleção premium de maquiagens e produtos de cuidados pessoais das melhores marcas do mundo. Qualidade, durabilidade e resultados incríveis.</p>
             <a href="#produtos" class="btn">Ver Produtos</a>
-            <a href="#filtros" class="btn btn-outline">Filtrar</a>
+            <a href="#contato" class="btn btn-outline">Falar no WhatsApp</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section id="sobre" class="about-section">
         <div class="container-fluid">
             <div class="about-content">
                 <div class="about-image">
@@ -815,7 +173,7 @@
                                 <input type="checkbox" id="mais-vendidos">
                                 <label for="mais-vendidos">Apenas Mais Vendidos</label>
                             </div>
-                            <div class="filter-checkbox">
+                            <div class="filter-checkbox" style="display: none;">
                                 <input type="checkbox" id="lançamentos">
                                 <label for="lançamentos">Apenas Lançamentos</label>
                             </div>
@@ -841,6 +199,156 @@
             </div>
         </div>
     </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contato">
+        <div class="container-fluid">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Estamos aqui para atendê-lo com excelência e profissionalismo. Escolha o produto que deseja e entre em contato conosco pelo WhatsApp para realizar seu pedido ou tirar suas dúvidas.</p>
+                    
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Endereço</strong><br>
+                            Rua das Flores, 123 - Centro<br>
+                            São Paulo - SP, 01000-000
+                        </div>
+                    </div>
+                    
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Telefone</strong><br>
+                            (11) 9999-9999
+                        </div>
+                    </div>
+                    
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            contato@beautyglamour.com
+                        </div>
+                    </div>
+                    
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            (11) 98888-8888
+                        </div>
+                    </div>
+                    
+                    <div class="social-links" style="margin-top: 30px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #c3447a; margin-bottom: 20px; font-weight: 600;">Solicite Informações pelo WhatsApp</h3>
+                    
+                    <div class="form-group">
+                        <label for="nome">Seu Nome</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="produto">Produto de Interesse</label>
+                        <select id="produto" class="form-control">
+                            <option value="">Selecione um produto</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" class="form-control" placeholder="Digite sua mensagem ou dúvida sobre o produto"></textarea>
+                    </div>
+                    
+                    <button class="btn-whatsapp" id="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar Mensagem pelo WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-close" id="modal-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-content">
+            <div class="modal-image">
+                <img id="modal-image" src="" alt="">
+            </div>
+            <div class="modal-details">
+                <div class="modal-brand" id="modal-brand"></div>
+                <h2 class="modal-name" id="modal-name"></h2>
+                <div class="modal-category" id="modal-category"></div>
+                <div class="modal-price" id="modal-price"></div>
+                <div class="modal-description" id="modal-description"></div>
+                
+                <div class="modal-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="feature-label">Tipo:</span>
+                        <span id="modal-tipo" class="feature-value"></span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="feature-label">Cores Disponíveis:</span>
+                        <span id="modal-cores" class="feature-value"></span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="feature-label">Status:</span>
+                        <span id="modal-status" class="feature-value"></span>
+                    </div>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn-contact" id="btn-contact-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </button>
+                    <button class="btn-close" id="btn-close-modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart-section" id="cart-section">
+        <div class="cart-header">
+            <h3>Meus Produtos</h3>
+            <button class="cart-close" id="cart-close">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-cart-whatsapp" id="btn-cart-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Enviar Lista pelo WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Badge -->
+    <div class="cart-badge" id="cart-badge">
+        <i class="fab fa-whatsapp"></i>
+        <div class="cart-count" id="cart-count">0</div>
+    </div>
 
     <footer>
         <div class="container-fluid">
@@ -872,7 +380,7 @@
                         <li><a href="#">Política de Privacidade</a></li>
                         <li><a href="#">Termos de Uso</a></li>
                         <li><a href="#">Trocas e Devoluções</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -892,367 +400,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Mock data for products
-        const produtos = [
-            {
-                id: 1,
-                nome: "Batom Líquido Matte",
-                marca: "dior",
-                categoria: "batom",
-                preco: 129.90,
-                cores: ["rosa", "vermelho", "vinho"],
-                imagem: "https://placehold.co/300x300/ff7bac/ffffff?text=Batom+Dior",
-                descricao: "Batom líquido de longa duração com acabamento matte perfeito.",
-                destaque: true,
-                tipo: "maquiagem"
-            },
-            {
-                id: 2,
-                nome: "Paleta de Sombras",
-                marca: "mac",
-                categoria: "sombra",
-                preco: 199.90,
-                cores: ["dourado", "rosa", "azul escuro", "roxo"],
-                imagem: "https://placehold.co/300x300/c3447a/ffffff?text=Paleta+MAC",
-                descricao: "Paleta com 12 sombras altamente pigmentadas e duradouras.",
-                destaque: true,
-                tipo: "maquiagem"
-            },
-            {
-                id: 3,
-                nome: "Base Líquida HD",
-                marca: "nars",
-                categoria: "base",
-                preco: 159.90,
-                cores: ["rosa", "dourado"],
-                imagem: "https://placehold.co/300x300/ff6b6b/ffffff?text=Base+NARS",
-                descricao: "Base de alta cobertura com acabamento natural e efeito matte.",
-                destaque: false,
-                tipo: "maquiagem"
-            },
-            {
-                id: 4,
-                nome: "Máscara de Cílios Volume",
-                marca: "fenty",
-                categoria: "rímel",
-                preco: 89.90,
-                cores: ["preto"],
-                imagem: "https://placehold.co/300x300/4ecdc4/ffffff?text=Rímel+Fenty",
-                descricao: "Máscara que proporciona volume extremo e separação perfeita.",
-                destaque: false,
-                tipo: "maquiagem"
-            },
-            {
-                id: 5,
-                nome: "Condicionador Hidratação Intensa",
-                marca: "loreal",
-                categoria: "haircare",
-                preco: 45.90,
-                cores: ["branco"],
-                imagem: "https://placehold.co/300x300/ffe66d/333333?text=Condicionador",
-                descricao: "Condicionador com fórmula rica que hidrata profundamente os fios.",
-                destaque: true,
-                tipo: "cuidados"
-            },
-            {
-                id: 6,
-                nome: "Protetor Solar Facial FPS 50",
-                marca: "nivea",
-                categoria: "proteção-solar",
-                preco: 69.90,
-                cores: ["branco"],
-                imagem: "https://placehold.co/300x300/2980b9/ffffff?text=Protetor+Solar",
-                descricao: "Proteção solar facial com toque seco e não comedogênico.",
-                destaque: true,
-                tipo: "cuidados"
-            },
-            {
-                id: 7,
-                nome: "Loção Hidratante Corporal",
-                marca: "aveeno",
-                categoria: "corporal",
-                preco: 89.90,
-                cores: ["branco"],
-                imagem: "https://placehold.co/300x300/8e44ad/ffffff?text=Loção+Corporal",
-                descricao: "Loção hidratante com aveia coloidal que acalma a pele sensível.",
-                destaque: false,
-                tipo: "cuidados"
-            },
-            {
-                id: 8,
-                nome: "Creme Anti-Idade Facial",
-                marca: "elizabeth-arden",
-                categoria: "skincare",
-                preco: 249.90,
-                cores: ["branco"],
-                imagem: "https://placehold.co/300x300/27ae60/ffffff?text=Creme+Anti-Idade",
-                descricao: "Creme anti-idade com retinol que reduz rugas e linhas de expressão.",
-                destaque: true,
-                tipo: "cuidados"
-            },
-            {
-                id: 9,
-                nome: "Shampoo Restauração Capilar",
-                marca: "loreal",
-                categoria: "haircare",
-                preco: 39.90,
-                cores: ["branco"],
-                imagem: "https://placehold.co/300x300/c3447a/ffffff?text=Shampoo",
-                descricao: "Shampoo que restaura a fibra capilar e devolve o brilho aos fios.",
-                destaque: false,
-                tipo: "cuidados"
-            },
-            {
-                id: 10,
-                nome: "Blush em Pó",
-                marca: "too-faced",
-                categoria: "blush",
-                preco: 99.90,
-                cores: ["rosa", "dourado"],
-                imagem: "https://placehold.co/300x300/ffe66d/333333?text=Blush+Too+Faced",
-                descricao: "Blush com partículas de brilho sutil e acabamento natural.",
-                destaque: false,
-                tipo: "maquiagem"
-            }
-        ];
-
-        // DOM elements
-        const produtosContainer = document.getElementById('produtos-container');
-        const noResults = document.getElementById('no-results');
-        const precoMinInput = document.getElementById('preco-min');
-        const precoMaxInput = document.getElementById('preco-max');
-        const precoMinValue = document.getElementById('preco-min-value');
-        const precoMaxValue = document.getElementById('preco-max-value');
-        const colorOptions = document.querySelectorAll('.color-option');
-        const maisVendidosCheckbox = document.getElementById('mais-vendidos');
-        const lancamentosCheckbox = document.getElementById('lançamentos');
-        const limparFiltrosBtn = document.getElementById('limpar-filtros');
-
-        // Format price
-        function formatPrice(price) {
-            return price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        }
-
-        // Render products
-        function renderProdutos(produtosFiltrados) {
-            produtosContainer.innerHTML = '';
-            
-            if (produtosFiltrados.length === 0) {
-                noResults.style.display = 'block';
-                return;
-            }
-            
-            noResults.style.display = 'none';
-            
-            produtosFiltrados.forEach(produto => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                
-                // Get first color for the product
-                const firstColor = produto.cores[0];
-                
-                productCard.innerHTML = `
-                    ${produto.destaque ? '<div class="product-badge">Mais Vendido</div>' : ''}
-                    <div class="product-image">
-                        <img src="${produto.imagem}" alt="${produto.nome}">
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${getCategoriaNome(produto.categoria)}</div>
-                        <div class="product-brand">${getMarcaNome(produto.marca)}</div>
-                        <h3 class="product-name">${produto.nome}</h3>
-                        <div class="product-colors">
-                            ${produto.cores.map(cor => `<div class="color-dot" style="background-color: ${getColorHex(cor)};" title="${cor}"></div>`).join('')}
-                        </div>
-                        <div class="product-price">${formatPrice(produto.preco)}</div>
-                        <div class="product-actions">
-                            <a href="#" class="btn-details">Ver Detalhes</a>
-                        </div>
-                    </div>
-                `;
-                
-                produtosContainer.appendChild(productCard);
-            });
-        }
-
-        // Get category name from key
-        function getCategoriaNome(categoriaKey) {
-            const categorias = {
-                'base': 'Base',
-                'batom': 'Batom',
-                'sombra': 'Sombra',
-                'rímel': 'Rímel',
-                'pó': 'Pó',
-                'blush': 'Blush',
-                'corretivo': 'Corretivo',
-                'delineador': 'Delineador',
-                'skincare': 'Skincare',
-                'haircare': 'Haircare',
-                'corporal': 'Cuidados Corporais',
-                'proteção-solar': 'Proteção Solar'
-            };
-            return categorias[categoriaKey] || categoriaKey;
-        }
-
-        // Get brand name from key
-        function getMarcaNome(marcaKey) {
-            const marcas = {
-                'dior': 'Dior',
-                'mac': 'MAC',
-                'nars': 'NARS',
-                'fenty': 'Fenty Beauty',
-                'too-faced': 'Too Faced',
-                'urban-decay': 'Urban Decay',
-                'loreal': 'L\'Oréal',
-                'nivea': 'Nivea',
-                'aveeno': 'Aveeno',
-                'elizabeth-arden': 'Elizabeth Arden',
-                'cerave': 'CeraVe'
-            };
-            return marcas[marcaKey] || marcaKey;
-        }
-
-        // Get color hex from color name
-        function getColorHex(colorName) {
-            const colors = {
-                'rosa': '#ff7bac',
-                'vinho': '#c3447a',
-                'vermelho': '#ff6b6b',
-                'azul': '#4ecdc4',
-                'dourado': '#ffe66d',
-                'azul escuro': '#2980b9',
-                'roxo': '#8e44ad',
-                'verde': '#27ae60',
-                'preto': '#000000',
-                'branco': '#ffffff'
-            };
-            return colors[colorName] || '#ccc';
-        }
-
-        // Update price values
-        function updatePriceValues() {
-            precoMinValue.textContent = precoMinInput.value;
-            precoMaxValue.textContent = precoMaxInput.value;
-        }
-
-        // Filter products - this function is called whenever any filter changes
-        function filtrarProdutos() {
-            const categoria = document.getElementById('categoria').value;
-            const marca = document.getElementById('marca').value;
-            const precoMin = parseFloat(precoMinInput.value);
-            const precoMax = parseFloat(precoMaxInput.value);
-            const apenasMaisVendidos = maisVendidosCheckbox.checked;
-            const apenasLancamentos = lancamentosCheckbox.checked;
-            
-            // Get selected colors
-            const selectedColors = Array.from(colorOptions)
-                .filter(option => option.classList.contains('selected'))
-                .map(option => option.getAttribute('data-color'));
-            
-            let produtosFiltrados = produtos.filter(produto => {
-                // Filter by category
-                if (categoria && produto.categoria !== categoria) {
-                    return false;
-                }
-                
-                // Filter by brand
-                if (marca && produto.marca !== marca) {
-                    return false;
-                }
-                
-                // Filter by price
-                if (produto.preco < precoMin || produto.preco > precoMax) {
-                    return false;
-                }
-                
-                // Filter by color
-                if (selectedColors.length > 0) {
-                    // Check if any of the product's colors match selected colors
-                    const hasMatchingColor = produto.cores.some(cor => 
-                        selectedColors.includes(cor)
-                    );
-                    if (!hasMatchingColor) {
-                        return false;
-                    }
-                }
-                
-                // Filter by best sellers
-                if (apenasMaisVendidos && !produto.destaque) {
-                    return false;
-                }
-                
-                // Note: In a real implementation, you would have a lançamento property
-                // For now, we'll show all products when lançamentos is checked
-                // In a real app, you would have a lançamento: true/false property in your products
-                
-                return true;
-            });
-            
-            renderProdutos(produtosFiltrados);
-        }
-
-        // Add event listeners to automatically filter when any filter changes
-        document.getElementById('categoria').addEventListener('change', filtrarProdutos);
-        document.getElementById('marca').addEventListener('change', filtrarProdutos);
-        maisVendidosCheckbox.addEventListener('change', filtrarProdutos);
-        lancamentosCheckbox.addEventListener('change', filtrarProdutos);
-
-        precoMinInput.addEventListener('input', function() {
-            // Ensure min is not greater than max
-            if (parseInt(this.value) > parseInt(precoMaxInput.value)) {
-                this.value = precoMaxInput.value;
-            }
-            updatePriceValues();
-            filtrarProdutos();
-        });
-
-        precoMaxInput.addEventListener('input', function() {
-            // Ensure max is not less than min
-            if (parseInt(this.value) < parseInt(precoMinInput.value)) {
-                this.value = precoMinInput.value;
-            }
-            updatePriceValues();
-            filtrarProdutos();
-        });
-
-        // Color selection
-        colorOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                this.classList.toggle('selected');
-                filtrarProdutos();
-            });
-        });
-
-        // Reset filters button
-        limparFiltrosBtn.addEventListener('click', function() {
-            // Reset all filters
-            document.getElementById('categoria').value = '';
-            document.getElementById('marca').value = '';
-            document.getElementById('preco-min').value = 10;
-            document.getElementById('preco-max').value = 500;
-            updatePriceValues();
-            
-            // Reset color selections
-            colorOptions.forEach(option => {
-                option.classList.remove('selected');
-            });
-            
-            // Reset checkboxes
-            maisVendidosCheckbox.checked = false;
-            lancamentosCheckbox.checked = false;
-            
-            // Re-render all products
-            filtrarProdutos();
-        });
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set initial price values
-            updatePriceValues();
-            
-            // Render all products initially
-            filtrarProdutos();
-        });
-    </script>
+    <script src="/main.js"></script>
 </body>
 </html>
