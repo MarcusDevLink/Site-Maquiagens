@@ -1,4 +1,4 @@
- * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -908,6 +908,162 @@
                 font-size: 11px;
                 padding: 7px 8px;
             }
+        }
+
+        /* Seller Selection Modal */
+        .seller-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1002;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: auto;
+        }
+
+        .seller-modal.active {
+            display: flex;
+        }
+
+        .seller-content {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .seller-header {
+            background: #c3447a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .seller-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .seller-body {
+            padding: 20px;
+        }
+
+        .seller-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .seller-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .seller-item:hover {
+            border-color: #c3447a;
+            transform: translateY(-2px);
+        }
+
+        .seller-item.selected {
+            border-color: #c3447a;
+            background-color: #fff5f8;
+        }
+
+        .seller-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .seller-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .seller-info {
+            flex: 1;
+        }
+
+        .seller-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .seller-role {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .seller-contact {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .seller-footer {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-seller-cancel {
+            flex: 1;
+            padding: 10px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-seller-cancel:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-seller-confirm {
+            flex: 1;
+            padding: 10px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-seller-confirm:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
         }
 
         /* Cart Section */

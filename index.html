@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -49,7 +48,7 @@
             <p>Descubra nossa coleção premium de maquiagens e produtos de cuidados pessoais das melhores marcas do mundo. Qualidade, durabilidade e resultados incríveis.</p>
             <div>
                 <a href="#produtos" class="btn">Ver Produtos</a>
-                <a href="#contato" class="btn btn-outline">Falar no WhatsApp</a>
+                <a href="#" class="btn btn-outline" id="btn-hero-whatsapp">Falar no WhatsApp</a>
             </div>
         </div>
     </section>
@@ -176,7 +175,7 @@
                                 <input type="checkbox" id="mais-vendidos">
                                 <label for="mais-vendidos">Apenas Mais Vendidos</label>
                             </div>
-                            <div class="filter-checkbox">
+                            <div class="filter-checkbox" style="display: none;">
                                 <input type="checkbox" id="lançamentos">
                                 <label for="lançamentos">Apenas Lançamentos</label>
                             </div>
@@ -322,6 +321,27 @@
                     </button>
                     <button class="btn-close" id="btn-close-modal">Fechar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seller Selection Modal -->
+    <div class="seller-modal" id="seller-modal">
+        <div class="seller-content">
+            <div class="seller-header">
+                <h3>Selecione um Vendedor</h3>
+            </div>
+            <div class="seller-body">
+                <div class="seller-list" id="seller-list">
+                    <!-- Sellers will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="seller-footer">
+                <button class="btn-seller-cancel" id="btn-seller-cancel">Cancelar</button>
+                <button class="btn-seller-confirm" id="btn-seller-confirm">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar com Vendedor
+                </button>
             </div>
         </div>
     </div>

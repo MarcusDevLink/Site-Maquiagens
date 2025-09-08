@@ -1,126 +1,162 @@
-// Mock data for products
-const produtos = [
-    {
-        id: 1,
-        nome: "Batom Líquido Matte",
-        marca: "dior",
-        categoria: "batom",
-        preco: 129.90,
-        cores: ["rosa", "vermelho", "vinho"],
-        imagem: "./imagens/tonico.jpg",
-        descricao: "Batom líquido de longa duração com acabamento matte perfeito. Fórmula enriquecida com óleos nutritivos que hidratam os lábios enquanto proporcionam cor intensa e duradoura. Ideal para quem busca um look sofisticado e moderno.",
-        destaque: false,
-        tipo: "maquiagem"
-    },
-    {
-        id: 2,
-        nome: "Paleta de Sombras",
-        marca: "mac",
-        categoria: "sombra",
-        preco: 199.90,
-        cores: ["dourado", "rosa", "azul escuro", "roxo"],
-        imagem: "./imagens/base.jpg",
-        descricao: "Paleta com 12 sombras altamente pigmentadas e duradouras. Com acabamentos variados - matte, cintilante e metálico - para criar looks versáteis do dia para a noite. Fórmula suave que esfuma facilmente e não craquela.",
-        destaque: false,
-        tipo: "maquiagem"
-    },
-    {
-        id: 3,
-        nome: "Base Líquida HD",
-        marca: "nars",
-        categoria: "base",
-        preco: 159.90,
-        cores: ["rosa", "dourado"],
-        imagem: "./imagens/matizador.jpg",
-        descricao: "Base de alta cobertura com acabamento natural e efeito matte. Fórmula leve que não obstrui os poros e contém SPF 15 para proteção diária. Ideal para peles mistas a oleosas, controla o brilho por até 16 horas.",
-        destaque: false,
-        tipo: "maquiagem"
-    },
-    {
-        id: 4,
-        nome: "Máscara de Cílios Volume",
-        marca: "fenty",
-        categoria: "rímel",
-        preco: 89.90,
-        cores: ["preto"],
-        imagem: "./imagens/serun.jpg",
-        descricao: "Máscara que proporciona volume extremo e separação perfeita. Escova exclusiva alcança até os cílios mais curtos, enquanto a fórmula à prova d'água mantém o efeito por até 24 horas sem borrar ou descascar.",
-        destaque: false,
-        tipo: "maquiagem"
-    },
-    {
-        id: 5,
-        nome: "Condicionador Hidratação Intensa",
-        marca: "loreal",
-        categoria: "haircare",
-        preco: 45.90,
-        cores: ["branco"],
-        imagem: "./imagens/touca.jpg",
-        descricao: "Condicionador com fórmula rica que hidrata profundamente os fios. Enriquecido com óleo de argan e queratina, restaura a fibra capilar, reduz o frizz e proporciona brilho intenso. Ideal para cabelos secos e danificados.",
-        destaque: false,
-        tipo: "cuidados"
-    },
-    {
-        id: 6,
-        nome: "Protetor solar em bastão",
-        marca: "Ollie",
-        categoria: "proteção-solar",
-        preco: 159.90,
-        cores: ["branco"],
-        imagem: "./imagens/protetor-solar.jpg",
-        descricao: "Proteção solar facial com toque seco e não comedogênico. Fórmula leve que não obstrui os poros, ideal para peles oleosas e acneicas. Proteção UVA/UVB ampla e contínua, com antioxidantes que combatem os radicais livres.",
-        destaque: false,
-        tipo: "cuidados"
-    },
-    {
-        id: 7,
-        nome: "Loção Hidratante Corporal",
-        marca: "aveeno",
-        categoria: "corporal",
-        preco: 89.90,
-        cores: ["branco"],
-        imagem: "./imagens/lip.jpg",
-        descricao: "Loção hidratante com aveia coloidal que acalma a pele sensível. Absorção rápida, sem deixar resíduo oleoso. Hidratação por até 24 horas, ideal para uso diário em todo o corpo, inclusive em peles com tendência a alergias.",
-        destaque: false,
-        tipo: "cuidados"
-    },
-    {
-        id: 8,
-        nome: "Creme Anti-Idade Facial",
-        marca: "elizabeth-arden",
-        categoria: "skincare",
-        preco: 249.90,
-        cores: ["branco"],
-        imagem: "./imagens/tinta igora.jpg",
-        descricao: "Creme anti-idade com retinol que reduz rugas e linhas de expressão. Fórmula avançada que estimula a produção de colágeno, melhora a firmeza e elasticidade da pele. Resultados visíveis em 4 semanas de uso.",
-        destaque: false,
-        tipo: "cuidados"
-    },
-    {
-        id: 9,
-        nome: "kit KUNT Condicionador e Shampoo",
-        marca: "Knut",
-        categoria: "haircare",
-        preco: 39.90,
-        cores: ["branco"],
-        imagem: "./imagens/condicionador.jpg",
-        descricao: "Shampoo e Condicionador que restaura a fibra capilar e devolve o brilho aos fios. Com queratina e proteínas do trigo, fortalece os cabelos danificados pela coloração, alisamento ou uso de calor. Limpa suavemente sem remover a hidratação natural.",
-        destaque: false,
-        tipo: "cuidados"
-    },
-    {
-        id: 10,
-        nome: "Blush em Pó",
-        marca: "Ciclo",
-        categoria: "perfume",
-        preco: 99.90,
-        cores: ["branco"],
-        imagem: "./imagens/perfulme-ciclo.jpg",
-        descricao: "Blush com partículas de brilho sutil e acabamento natural. Fórmula altamente pigmentada que permite build-up de cor, ideal para criar um glow saudável. Textura sedosa que esfuma facilmente e dura por até 12 horas.",
-        destaque: false,
-        tipo: "maquiagem"
-    }
-];
+        // Mock data for products
+        const produtos = [
+            {
+                id: 1,
+                nome: "Batom Líquido Matte",
+                marca: "dior",
+                categoria: "batom",
+                preco: 129.90,
+                cores: ["rosa", "vermelho", "vinho"],
+                imagem: "https://placehold.co/600x600/ff7bac/ffffff?text=Batom+Dior",
+                descricao: "Batom líquido de longa duração com acabamento matte perfeito. Fórmula enriquecida com óleos nutritivos que hidratam os lábios enquanto proporcionam cor intensa e duradoura. Ideal para quem busca um look sofisticado e moderno.",
+                destaque: true,
+                tipo: "maquiagem"
+            },
+            {
+                id: 2,
+                nome: "Paleta de Sombras",
+                marca: "mac",
+                categoria: "sombra",
+                preco: 199.90,
+                cores: ["dourado", "rosa", "azul escuro", "roxo"],
+                imagem: "https://placehold.co/600x600/c3447a/ffffff?text=Paleta+MAC",
+                descricao: "Paleta com 12 sombras altamente pigmentadas e duradouras. Com acabamentos variados - matte, cintilante e metálico - para criar looks versáteis do dia para a noite. Fórmula suave que esfuma facilmente e não craquela.",
+                destaque: true,
+                tipo: "maquiagem"
+            },
+            {
+                id: 3,
+                nome: "Base Líquida HD",
+                marca: "nars",
+                categoria: "base",
+                preco: 159.90,
+                cores: ["rosa", "dourado"],
+                imagem: "https://placehold.co/600x600/ff6b6b/ffffff?text=Base+NARS",
+                descricao: "Base de alta cobertura com acabamento natural e efeito matte. Fórmula leve que não obstrui os poros e contém SPF 15 para proteção diária. Ideal para peles mistas a oleosas, controla o brilho por até 16 horas.",
+                destaque: false,
+                tipo: "maquiagem"
+            },
+            {
+                id: 4,
+                nome: "Máscara de Cílios Volume",
+                marca: "fenty",
+                categoria: "rímel",
+                preco: 89.90,
+                cores: ["preto"],
+                imagem: "https://placehold.co/600x600/4ecdc4/ffffff?text=Rímel+Fenty",
+                descricao: "Máscara que proporciona volume extremo e separação perfeita. Escova exclusiva alcança até os cílios mais curtos, enquanto a fórmula à prova d'água mantém o efeito por até 24 horas sem borrar ou descascar.",
+                destaque: false,
+                tipo: "maquiagem"
+            },
+            {
+                id: 5,
+                nome: "Condicionador Hidratação Intensa",
+                marca: "loreal",
+                categoria: "haircare",
+                preco: 45.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/600x600/ffe66d/333333?text=Condicionador",
+                descricao: "Condicionador com fórmula rica que hidrata profundamente os fios. Enriquecido com óleo de argan e queratina, restaura a fibra capilar, reduz o frizz e proporciona brilho intenso. Ideal para cabelos secos e danificados.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 6,
+                nome: "Protetor Solar Facial FPS 50",
+                marca: "nivea",
+                categoria: "proteção-solar",
+                preco: 69.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/600x600/2980b9/ffffff?text=Protetor+Solar",
+                descricao: "Proteção solar facial com toque seco e não comedogênico. Fórmula leve que não obstrui os poros, ideal para peles oleosas e acneicas. Proteção UVA/UVB ampla e contínua, com antioxidantes que combatem os radicais livres.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 7,
+                nome: "Loção Hidratante Corporal",
+                marca: "aveeno",
+                categoria: "corporal",
+                preco: 89.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/600x600/8e44ad/ffffff?text=Loção+Corporal",
+                descricao: "Loção hidratante com aveia coloidal que acalma a pele sensível. Absorção rápida, sem deixar resíduo oleoso. Hidratação por até 24 horas, ideal para uso diário em todo o corpo, inclusive em peles com tendência a alergias.",
+                destaque: false,
+                tipo: "cuidados"
+            },
+            {
+                id: 8,
+                nome: "Creme Anti-Idade Facial",
+                marca: "elizabeth-arden",
+                categoria: "skincare",
+                preco: 249.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/600x600/27ae60/ffffff?text=Creme+Anti-Idade",
+                descricao: "Creme anti-idade com retinol que reduz rugas e linhas de expressão. Fórmula avançada que estimula a produção de colágeno, melhora a firmeza e elasticidade da pele. Resultados visíveis em 4 semanas de uso.",
+                destaque: true,
+                tipo: "cuidados"
+            },
+            {
+                id: 9,
+                nome: "Shampoo Restauração Capilar",
+                marca: "loreal",
+                categoria: "haircare",
+                preco: 39.90,
+                cores: ["branco"],
+                imagem: "https://placehold.co/600x600/c3447a/ffffff?text=Shampoo",
+                descricao: "Shampoo que restaura a fibra capilar e devolve o brilho aos fios. Com queratina e proteínas do trigo, fortalece os cabelos danificados pela coloração, alisamento ou uso de calor. Limpa suavemente sem remover a hidratação natural.",
+                destaque: false,
+                tipo: "cuidados"
+            },
+            {
+                id: 10,
+                nome: "Blush em Pó",
+                marca: "too-faced",
+                categoria: "blush",
+                preco: 99.90,
+                cores: ["rosa", "dourado"],
+                imagem: "https://placehold.co/600x600/ffe66d/333333?text=Blush+Too+Faced",
+                descricao: "Blush com partículas de brilho sutil e acabamento natural. Fórmula altamente pigmentada que permite build-up de cor, ideal para criar um glow saudável. Textura sedosa que esfuma facilmente e dura por até 12 horas.",
+                destaque: false,
+                tipo: "maquiagem"
+            }
+        ];
+
+        // Vendedores
+        const vendedores = [
+            {
+                id: 1,
+                nome: "Ana Silva",
+                cargo: "Consultora de Beleza Sênior",
+                contato: "(11) 9999-1111",
+                imagem: "https://placehold.co/100x100/c3447a/ffffff?text=Ana",
+                numero: "551199991111"
+            },
+            {
+                id: 2,
+                nome: "Carla Mendes",
+                cargo: "Especialista em Maquiagem",
+                contato: "(11) 9999-2222",
+                imagem: "https://placehold.co/100x100/ff7bac/ffffff?text=Carla",
+                numero: "551199992222"
+            },
+            {
+                id: 3,
+                nome: "Juliana Costa",
+                cargo: "Consultora de Skincare",
+                contato: "(11) 9999-3333",
+                imagem: "https://placehold.co/100x100/25D366/ffffff?text=Juliana",
+                numero: "551199993333"
+            },
+            {
+                id: 4,
+                nome: "Patrícia Almeida",
+                cargo: "Gerente de Vendas",
+                contato: "(11) 9999-4444",
+                imagem: "https://placehold.co/100x100/2980b9/ffffff?text=Patrícia",
+                numero: "551199994444"
+            }
+        ];
 
         // DOM elements
         const produtosContainer = document.getElementById('produtos-container');
@@ -149,11 +185,18 @@ const produtos = [
         const modalCores = document.getElementById('modal-cores');
         const modalStatus = document.getElementById('modal-status');
 
+        // Seller selection modal elements
+        const sellerModal = document.getElementById('seller-modal');
+        const sellerList = document.getElementById('seller-list');
+        const btnSellerCancel = document.getElementById('btn-seller-cancel');
+        const btnSellerConfirm = document.getElementById('btn-seller-confirm');
+
         // Contact form elements
         const nomeInput = document.getElementById('nome');
         const produtoSelect = document.getElementById('produto');
         const mensagemInput = document.getElementById('mensagem');
         const btnWhatsapp = document.getElementById('btn-whatsapp');
+        const btnHeroWhatsapp = document.getElementById('btn-hero-whatsapp');
 
         // Cart elements
         const cartBadge = document.getElementById('cart-badge');
@@ -171,6 +214,8 @@ const produtos = [
 
         // Current product for modal
         let currentProduct = null;
+        let currentMessage = '';
+        let selectedSeller = null;
 
         // Shopping cart
         let cart = [];
@@ -367,12 +412,59 @@ const produtos = [
             return mensagem;
         }
 
-        // Send WhatsApp message
-        function sendWhatsAppMessage(message) {
-            if (!message) return;
+        // Open seller selection modal
+        function openSellerModal(message) {
+            currentMessage = message;
+            sellerList.innerHTML = '';
             
-            const numero = '5511988888888'; // Número de WhatsApp (sem +, apenas com código do país)
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+            vendedores.forEach(vendedor => {
+                const sellerItem = document.createElement('div');
+                sellerItem.className = 'seller-item';
+                sellerItem.setAttribute('data-id', vendedor.id);
+                sellerItem.innerHTML = `
+                    <div class="seller-avatar">
+                        <img src="${vendedor.imagem}" alt="${vendedor.nome}">
+                    </div>
+                    <div class="seller-info">
+                        <div class="seller-name">${vendedor.nome}</div>
+                        <div class="seller-role">${vendedor.cargo}</div>
+                        <div class="seller-contact">${vendedor.contato}</div>
+                    </div>
+                `;
+                
+                sellerList.appendChild(sellerItem);
+            });
+            
+            // Add event listeners to seller items
+            document.querySelectorAll('.seller-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.seller-item').forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedSeller = vendedores.find(v => v.id === parseInt(this.getAttribute('data-id')));
+                });
+            });
+            
+            // Select first seller by default
+            if (document.querySelector('.seller-item')) {
+                document.querySelector('.seller-item').click();
+            }
+            
+            sellerModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close seller selection modal
+        function closeSellerModal() {
+            sellerModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            selectedSeller = null;
+        }
+
+        // Send WhatsApp message
+        function sendWhatsAppMessage(message, seller) {
+            if (!message || !seller) return;
+            
+            const url = `https://wa.me/${seller.numero}?text=${encodeURIComponent(message)}`;
             
             window.open(url, '_blank');
         }
@@ -471,10 +563,7 @@ const produtos = [
             
             const nome = nomeInput.value || 'Cliente';
             const mensagem = `Olá! Estou interessado(a) no produto:\n\n${currentProduct.nome}\nMarca: ${getMarcaNome(currentProduct.marca)}\nPreço: ${formatPrice(currentProduct.preco)}\n\nPoderiam me passar mais informações?`;
-            const numero = '5511988888888'; // Número de WhatsApp (sem +, apenas com código do país)
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-            
-            window.open(url, '_blank');
+            openSellerModal(mensagem);
         }
 
         // Send WhatsApp message from contact form
@@ -504,11 +593,7 @@ const produtos = [
             }
             
             mensagemTexto += 'Aguardo retorno!';
-            
-            const numero = '5511988888888'; // Número de WhatsApp (sem +, apenas com código do país)
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagemTexto)}`;
-            
-            window.open(url, '_blank');
+            openSellerModal(mensagemTexto);
         }
 
         // Mobile menu toggle
@@ -647,21 +732,48 @@ const produtos = [
 
         // Contact form button
         btnWhatsapp.addEventListener('click', sendWhatsAppFromForm);
+        btnHeroWhatsapp.addEventListener('click', function(e) {
+            e.preventDefault();
+            const nome = nomeInput.value.trim() || 'Cliente';
+            const mensagem = `Olá! Meu nome é ${nome}.\n\nGostaria de informações sobre seus produtos.\n\nAguardo retorno!`;
+            openSellerModal(mensagem);
+        });
 
         // Cart badge click - open cart
         cartBadge.addEventListener('click', function() {
             cartSection.classList.add('active');
+            cartBadge.style.display = 'none';
         });
 
         // Cart close button
         cartClose.addEventListener('click', function() {
             cartSection.classList.remove('active');
+            cartBadge.style.display = cart.length > 0 ? 'flex' : 'none';
         });
 
         // Send WhatsApp message from cart
         btnCartWhatsapp.addEventListener('click', function() {
             const message = generateWhatsAppMessage();
-            sendWhatsAppMessage(message);
+            if (message) {
+                openSellerModal(message);
+            }
+        });
+
+        // Seller modal event listeners
+        btnSellerCancel.addEventListener('click', closeSellerModal);
+        
+        btnSellerConfirm.addEventListener('click', function() {
+            if (selectedSeller && currentMessage) {
+                sendWhatsAppMessage(currentMessage, selectedSeller);
+                closeSellerModal();
+            }
+        });
+
+        // Close seller modal when clicking outside
+        sellerModal.addEventListener('click', function(e) {
+            if (e.target === sellerModal) {
+                closeSellerModal();
+            }
         });
 
         // Mobile menu event listeners
